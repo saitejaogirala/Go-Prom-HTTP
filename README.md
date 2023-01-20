@@ -41,5 +41,5 @@ End point for codes can be seen on http://localhost:9090/codes
 Grafana is running on http://localhost:3000/
 
 
-1. Set Prometheus as your data source. http://host.docker.internal:9090
+1. Set Prometheus as your data source. http://host.docker.internal:9090 If this doesn't work please set the prometheus service IP as data source.
 2. Import the grafana-dashboard.json as needed.
