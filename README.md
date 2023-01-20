@@ -6,16 +6,23 @@ Simple GO lang application that expose metrics to prometheus and visualise data 
 
 - Golang
 - Docker
+- kind
 
 ## Getting started
 
-### Starting the application
+I have used custom kind configuration for the cluster to bring the kubernetes cluster components targets up.
 
-start all services by running the docker-compose file:
+### Starting the application 
+
+Application can be deployed using both docker-compose and kubernetes native way. 
+
+1. start all services by running the docker-compose file:
 
 ```
 docker-compose up -d
 ```
+2. Deploy using the kubernetes deploy configuration. This can be found here: https://github.com/saitejaogirala/Go-Prom-HTTP/tree/main/deployment
+
 
 ### Generating load on HTTP Server
 
