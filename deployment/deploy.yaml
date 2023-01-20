@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-web-app-deployment
+  labels:
+    app: simple-web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-web-app
+  template:
+    metadata:
+      labels:
+        app: simple-web-app
+    spec:
+      containers:
+      - name: simple-web-app-cont
+        image: tejaa/simple-web-app
+        ports:
+        - name: web
+          containerPort: 9000
