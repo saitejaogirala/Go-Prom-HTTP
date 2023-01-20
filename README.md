@@ -7,6 +7,11 @@ Simple GO lang application that expose metrics to prometheus and visualise data 
 - Golang
 - Docker
 - kind
+- MetalLB load balancer. Used this: https://kind.sigs.k8s.io/docs/user/loadbalancer/
+
+## Quick Intro:
+
+Deployment of the application can be done in various ways using helm charts, writing a simple make file and deploying prom operator directly on the namespace. But, i have used bare metal ways(deploying in a hardway) like provisioning every single service,deployment,roles,RBAC,rolebindings,clusterrolebindings writing all the configuration files in their respective loacations for example all the promethues configuration can be found under prometheus directory.
 
 ## Getting started
 
