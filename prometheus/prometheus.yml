@@ -1,21 +1,6 @@
-# global:
-#   scrape_interval:     15s
-#   evaluation_interval: 15s
 
-# scrape_configs:
-#   - job_name: prometheus
-#     static_configs:
-#       - targets: ['localhost:9090']
-#   - job_name: simple-web-app 
-#     metrics_path: /metrics
-#     static_configs:
-#       - targets:
-#         - simple-web-app:9000
 global:
-  scrape_interval: 15s # By default, scrape targets every 15seconds. # Attach these labels to any time series or alerts when #communicating with external systems (federation, remote storage, #Alertmanager).
-  external_labels:
-    monitor: 'codelab-monitor'
-# Scraping Prometheus itself
+  scrape_interval: 15s
 scrape_configs:
 - job_name: 'prometheus'
   scrape_interval: 5s
